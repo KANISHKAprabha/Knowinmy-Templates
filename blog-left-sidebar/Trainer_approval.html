@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload User Data</title>
+    <style>
+        /* Navbar styling */
+        .navbar {
+            background-color: #1E1E2F; /* var(--navbar-dark-primary) */
+            color: #FFFFFF; /* var(--navbar-light-primary) */
+            border-top-color: #553CDF;
+            border-right-color: #553CDF;
+            border-bottom-color: #553CDF;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Container styling */
+        .container {
+            margin-top: 50px;
+            color: #1E1E2F; /* Dark primary text */
+        }
+
+        .form-container {
+            padding: 20px;
+            border: 1px solid #553CDF;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Button styling */
+        .btn-primary {
+            background-color: #553CDF;
+            border: none;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            background-color: #4A32C0;
+        }
+
+        .btn-secondary {
+            background-color: #6C757D;
+            border: none;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            align-items: center;
+            margin:0 auto;
+            display: block;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5B636B;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-4 {
+            margin-top: 1.5rem;
+        }
+
+        .mt-5 {
+            margin-top: 3rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        .alert {
+            background-color: #E9ECEF;
+            color: #1E1E2F;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .alert ul {
+            margin-bottom: 0;
+        }
+
+        .form-control-file {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>Upload User Data</h1>
+    </div>
+
+    <!-- Main container -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <!-- File upload form -->
+                <div class="form-container">
+                    <form method="post" id="course-creation-form" enctype="multipart/form-data" action="your-upload-url-here">
+                        <div class="form-group">
+                            <label for="excel_file" class="font-weight-bold">Choose Excel File</label>
+                            <input type="file" name="excel_file" id="excel_file" class="form-control-file" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary mt-4">Upload</button>
+                    </form>
+
+                    <!-- Button to redirect to the onboarding page -->
+                    
+                </div>
+                <br>
+                <div>
+                    <a href="your-onboarding-url-here" class="btn btn-secondary mt-4">Onboard Users Manually</a>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Message display -->
+        
+    </div>
+
+    <script>
+        function submit_form() {
+            document.getElementById("course-creation-form").submit();
+        }
+    </script>
+</body>
+</html>
